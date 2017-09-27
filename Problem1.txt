@@ -1,0 +1,29 @@
+Explanation for problem 1:
+
+Player Classs:
+Player uses composition to get a map of transportation and items, the value 
+is the int quantity for each item/transportation.
+
+Transportation:
+Abstract class, has a gettype() and a canCross().
+Allows for future transportation to be added in the future.
+
+Horse/Ship/Airship:
+Publicly inherit from transpotation, uses composition to create
+a set of terrain's that each transprtation can cross.
+
+Terrian:
+Pure abstract class. Allows for future terrains to be added in the future.
+
+Plains, Forest, Mountains, Water:
+Publicly inherits from terrain.
+
+Item:
+Pure abstract class, virtual function action(); each child class must do its own
+implementation:
+
+Armor/ Shelter/ Weapons:
+Publicly inherit from item, also abstract clasees, implemented by child classes
+
+Shield/ Helmet/ Chain/ Tent/ ....:
+Publicly inherit from parent classes. Allows for implementation for future items.
